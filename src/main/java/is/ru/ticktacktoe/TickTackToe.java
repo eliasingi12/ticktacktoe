@@ -2,17 +2,26 @@ package is.ru.ticktacktoe;
 
 public class TickTackToe {
 
-   public static int intRet() {
-        return 0;
-    }
-    public static int uncovered() {
-    	System.out.println("I am an uncovered function");
-        return 0;
+    public static final int MARK_X = -1;
+    public static final int MARK_O = -2;
+    public static final int SIZE = 3;
+
+    public void initializeBoard(int tac[][]){
+        int n = 1;
+        for(int i = 0; i < SIZE; i++)
+        {
+            for(int j = 0; j < SIZE; j++)
+            {
+                tac[i][j] = n;
+                n++;
+            }
+        }          
     }
 
-   public static void main(String[] args) {
-        System.out.println("Hello TickTackToe");
-        for(String param: args)
-            System.out.println("Parameter : "+param);
+    public char getPlayer(int n){
+        if(n == -1)
+            return 'X';
+        else
+            return 'O';
     }
 }
