@@ -40,8 +40,5 @@ public class TickTackToeTest {
 		TickTackToe tick = new TickTackToe();
 		assertEquals('X', tick.getPlayer(TickTackToe.MARK_X));
 		assertEquals('O', tick.getPlayer(TickTackToe.MARK_O));
-
 	}
-
-
 }
