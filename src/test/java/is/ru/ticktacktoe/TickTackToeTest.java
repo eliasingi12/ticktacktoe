@@ -182,4 +182,20 @@ public class TickTackToeTest {
 		tick.updateBoard(9);
 		assertEquals(tick.MARK_O, tick.board[2][2]);
 	}
+
+	@Test
+	public void testIsLegal(){
+		TickTackToe tick = new TickTackToe();
+		assertEquals(false, tick.isLegal(-1));
+		assertEquals(false, tick.isLegal(10));
+
+		TickTackToe.board[0][0] = 1;
+		assertEquals(true, tick.isLegal(1));
+
+		TickTackToe.board[0][0] = tick.MARK_X;
+		assertEquals(false, tick.isLegal(1));
+
+		TickTackToe.board[0][1] = tick.MARK_O;
+		assertEquals(false, tick.isLegal(2));
+	}
 }

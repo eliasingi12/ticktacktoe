@@ -83,5 +83,12 @@ public class TickTackToe {
         int line = convertToLine(pos);
         int column = convertToColumn(pos);
         board[line][column] = currPlayer;
-    }  
+    } 
+
+    public boolean isLegal(int pos){
+        int line = convertToLine(pos);
+        int column = convertToColumn(pos);
+        
+        return!((pos < 0 || pos > SIZE*SIZE) || (board[line][column] == MARK_X ||  board[line][column] == MARK_O));
+    }
 }
