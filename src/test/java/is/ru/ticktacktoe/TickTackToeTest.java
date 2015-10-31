@@ -81,4 +81,25 @@ public class TickTackToeTest {
 		TickTackToe.board[2][2] = TickTackToe.MARK_O;
 		assertEquals(false, tick.checkColumns(2));
 	}
+
+		@Test
+	public void testCheckDiagonal(){
+		TickTackToe tick = new TickTackToe();
+		TickTackToe.board[0][0] = TickTackToe.MARK_X;
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		TickTackToe.board[2][2] = TickTackToe.MARK_X;
+
+		assertEquals(true, tick.checkDiagonal());
+
+		TickTackToe.board[0][2] = TickTackToe.MARK_O;
+		TickTackToe.board[1][1] = TickTackToe.MARK_O;
+		TickTackToe.board[2][0] = TickTackToe.MARK_O;
+
+		assertEquals(true, tick.checkDiagonal());
+
+		TickTackToe.board[0][0] = TickTackToe.MARK_O;
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		TickTackToe.board[2][2] = TickTackToe.MARK_X;
+		assertEquals(false, tick.checkDiagonal());
+	}
 }
