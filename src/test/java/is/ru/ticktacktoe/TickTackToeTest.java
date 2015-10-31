@@ -27,7 +27,7 @@ public class TickTackToeTest {
 		{
 			for(int j = 0; j < 3; j++)
 			{
-				assertEquals(1, TickTackToe.board[0][0]);
+				assertEquals(n, TickTackToe.board[i][j]);
 				n++;
 			}
 		}
@@ -82,7 +82,7 @@ public class TickTackToeTest {
 		assertEquals(false, tick.checkColumns(2));
 	}
 
-		@Test
+	@Test
 	public void testCheckDiagonal(){
 		TickTackToe tick = new TickTackToe();
 		TickTackToe.board[0][0] = TickTackToe.MARK_X;
@@ -101,5 +101,48 @@ public class TickTackToeTest {
 		TickTackToe.board[1][1] = TickTackToe.MARK_X;
 		TickTackToe.board[2][2] = TickTackToe.MARK_X;
 		assertEquals(false, tick.checkDiagonal());
+	}
+
+	@Test
+	public void testCheckIfWinning(){
+		TickTackToe tick = new TickTackToe();
+		
+		// This is the board when x is winning diagonal
+		TickTackToe.board[0][0] = TickTackToe.MARK_X;
+		TickTackToe.board[0][1] = TickTackToe.MARK_O;
+		TickTackToe.board[0][2] = TickTackToe.MARK_X;
+		TickTackToe.board[1][0] = TickTackToe.MARK_O;
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		TickTackToe.board[1][2] = TickTackToe.MARK_O;
+		TickTackToe.board[2][0] = TickTackToe.MARK_X;
+		TickTackToe.board[2][1] = TickTackToe.MARK_O;
+		TickTackToe.board[2][2] = TickTackToe.MARK_X;
+		assertEquals(true, tick.checkIfWinning());
+
+		// This it the board when o is winning with lines.
+		TickTackToe.board[0][0] = TickTackToe.MARK_O;
+		TickTackToe.board[0][1] = TickTackToe.MARK_O;
+		TickTackToe.board[0][2] = TickTackToe.MARK_O;
+		TickTackToe.board[1][0] = TickTackToe.MARK_X;
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		TickTackToe.board[1][2] = 1;
+		TickTackToe.board[2][0] = TickTackToe.MARK_X;
+		TickTackToe.board[2][1] = 1;
+		TickTackToe.board[2][2] = 1;
+		assertEquals(true, tick.checkIfWinning());
+
+		// No one is winning
+		TickTackToe.board[0][0] = 1;
+		TickTackToe.board[0][1] = 2;
+		TickTackToe.board[0][2] = 3;
+		TickTackToe.board[1][0] = TickTackToe.MARK_O;
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		TickTackToe.board[1][2] = 6;
+		TickTackToe.board[2][0] = TickTackToe.MARK_X;
+		TickTackToe.board[2][1] = 8;
+		TickTackToe.board[2][2] = 9;
+		assertEquals(false, tick.checkIfWinning());
+
+	
 	}
 }
