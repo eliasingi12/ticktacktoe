@@ -69,4 +69,19 @@ public class TickTackToe {
         else
             currPlayer = MARK_O;
     }
+
+    public int convertToLine(int pos){
+        return (pos  - 1)/SIZE;
+    }
+
+    public int convertToColumn(int pos){
+        return (pos - 1)%SIZE;
+    }
+
+    public void updateBoard(int pos)
+    {
+        int line = convertToLine(pos);
+        int column = convertToColumn(pos);
+        board[line][column] = currPlayer;
+    }  
 }

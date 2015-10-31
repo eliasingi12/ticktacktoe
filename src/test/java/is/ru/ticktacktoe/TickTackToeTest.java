@@ -157,4 +157,29 @@ public class TickTackToeTest {
 		tick.changePlayers(1);
 		assertEquals(TickTackToe.currPlayer, TickTackToe.MARK_O);
 	}
+
+	@Test
+	public void testConvertToLine(){
+		TickTackToe tick = new TickTackToe();
+		assertEquals(1, tick.convertToLine(5));
+		assertEquals(2, tick.convertToLine(9));
+	}
+
+	@Test
+	public void testConvertToColumn(){
+		TickTackToe tick = new TickTackToe();
+		assertEquals(0, tick.convertToColumn(4));
+		assertEquals(2, tick.convertToColumn(9));
+	}
+
+	@Test
+	public void testUpdateBoard(){
+		TickTackToe tick = new TickTackToe();
+		tick.updateBoard(1);
+		assertEquals(tick.MARK_X, tick.board[0][0]);
+
+		tick.currPlayer = tick.MARK_O;
+		tick.updateBoard(9);
+		assertEquals(tick.MARK_O, tick.board[2][2]);
+	}
 }
