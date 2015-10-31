@@ -60,4 +60,25 @@ public class TickTackToeTest {
 		TickTackToe.board[2][2] = TickTackToe.MARK_O;
 		assertEquals(false, tick.checkLines(2));
 	}
+
+	@Test
+	public void testCheckColumns(){
+		TickTackToe tick = new TickTackToe();
+		TickTackToe.board[0][0] = TickTackToe.MARK_X;
+		TickTackToe.board[1][0] = TickTackToe.MARK_X;
+		TickTackToe.board[2][0] = TickTackToe.MARK_X;
+
+		assertEquals(true, tick.checkColumns(0));
+
+		TickTackToe.board[0][1] = TickTackToe.MARK_O;
+		TickTackToe.board[1][1] = TickTackToe.MARK_O;
+		TickTackToe.board[2][1] = TickTackToe.MARK_O;
+
+		assertEquals(true, tick.checkColumns(1));
+
+		TickTackToe.board[0][2] = TickTackToe.MARK_X;
+		TickTackToe.board[1][2] = TickTackToe.MARK_O;
+		TickTackToe.board[2][2] = TickTackToe.MARK_O;
+		assertEquals(false, tick.checkColumns(2));
+	}
 }
