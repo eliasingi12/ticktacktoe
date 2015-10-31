@@ -80,8 +80,8 @@ public class TickTackToe {
 
     public void updateBoard(int pos)
     {
-        int line = (pos  - 1)/SIZE;
-        int column = (pos - 1)%SIZE;
+        int line = convertToLine(pos);
+        int column = convertToColumn(pos);
         board[line][column] = currPlayer;
     }  
 }
