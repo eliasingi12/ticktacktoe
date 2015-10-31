@@ -26,7 +26,7 @@ public class TickTackToe {
             return 'O';
     }
 
-    public boolean CheckLines(int i){
-        return false;
+    public boolean checkLines(int i){
+        return ((board[i][0] == board[i][1]) && (board[i][0] == board[i][2]));
     }
 }

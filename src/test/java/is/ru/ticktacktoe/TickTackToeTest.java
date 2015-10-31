@@ -39,4 +39,25 @@ public class TickTackToeTest {
 		assertEquals('X', tick.getPlayer(TickTackToe.MARK_X));
 		assertEquals('O', tick.getPlayer(TickTackToe.MARK_O));
 	}
+
+	@Test
+	public void testCheckLines(){
+		TickTackToe tick = new TickTackToe();
+		TickTackToe.board[0][0] = TickTackToe.MARK_X;
+		TickTackToe.board[0][1] = TickTackToe.MARK_X;
+		TickTackToe.board[0][2] = TickTackToe.MARK_X;
+
+		assertEquals(true, tick.checkLines(0));
+
+		TickTackToe.board[1][0] = TickTackToe.MARK_O;
+		TickTackToe.board[1][1] = TickTackToe.MARK_O;
+		TickTackToe.board[1][2] = TickTackToe.MARK_O;
+
+		assertEquals(true, tick.checkLines(1));
+
+		TickTackToe.board[2][0] = TickTackToe.MARK_X;
+		TickTackToe.board[2][1] = TickTackToe.MARK_O;
+		TickTackToe.board[2][2] = TickTackToe.MARK_O;
+		assertEquals(false, tick.checkLines(2));
+	}
 }
