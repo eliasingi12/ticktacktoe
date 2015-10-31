@@ -69,4 +69,8 @@ public class TickTackToe {
         else
             currPlayer = MARK_O;
     }
+
+    public int convertToLine(int pos){
+        return (pos  - 1)/SIZE;
+    }    
 }

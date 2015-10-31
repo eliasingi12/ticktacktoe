@@ -157,4 +157,11 @@ public class TickTackToeTest {
 		tick.changePlayers(1);
 		assertEquals(TickTackToe.currPlayer, TickTackToe.MARK_O);
 	}
+
+	@Test
+	public void testconvertToLine(){
+		TickTackToe tick = new TickTackToe();
+		assertEquals(1, tick.convertToLine(5));
+		assertEquals(2, tick.convertToLine(9));
+	}
 }
