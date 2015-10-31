@@ -34,10 +34,12 @@ public class TickTackToeTest {
 	}
 
 	@Test
-	public void testGetPlayer(){
+	public void testGetPlayer(){	
 		TickTackToe tick = new TickTackToe();
-		assertEquals('X', tick.getPlayer(TickTackToe.MARK_X));
-		assertEquals('O', tick.getPlayer(TickTackToe.MARK_O));
+
+		assertEquals('X', tick.getPlayer());
+		tick.currPlayer = tick.MARK_O;
+		assertEquals('O', tick.getPlayer());
 	}
 
 	@Test
@@ -141,8 +143,18 @@ public class TickTackToeTest {
 		TickTackToe.board[2][0] = TickTackToe.MARK_X;
 		TickTackToe.board[2][1] = 8;
 		TickTackToe.board[2][2] = 9;
-		assertEquals(false, tick.checkIfWinning());
+		assertEquals(false, tick.checkIfWinning());	
+	}
 
-	
+	@Test
+	public void testChangePlayers(){
+		TickTackToe tick = new TickTackToe();
+		// After even number of rounds X is the current player
+		tick.changePlayers(2);
+		assertEquals(TickTackToe.currPlayer, TickTackToe.MARK_X);
+
+		// After odd number of rounds O is the current player
+		tick.changePlayers(1);
+		assertEquals(TickTackToe.currPlayer, TickTackToe.MARK_O);
 	}
 }

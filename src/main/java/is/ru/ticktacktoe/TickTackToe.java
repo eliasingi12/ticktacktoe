@@ -5,7 +5,12 @@ public class TickTackToe {
     public static final int MARK_X = -1;
     public static final int MARK_O = -2;
     public static final int SIZE = 3;
+    public static int currPlayer = MARK_X;
     public static int [][] board = new int [SIZE][SIZE];
+
+    TickTackToe(){
+        currPlayer = MARK_X;
+    }
 
     public void initializeBoard(){
         int n = 1;
@@ -18,9 +23,10 @@ public class TickTackToe {
             }
         }          
     }
-
-    public char getPlayer(int n){
-        if(n == -1)
+   
+    public char getPlayer()
+    {
+        if(currPlayer == MARK_X)
             return 'X';
         else
             return 'O';
@@ -55,5 +61,12 @@ public class TickTackToe {
             }
         }
         return false;
+    }
+
+    public void changePlayers(int count){
+        if(count%2 == 0)
+            currPlayer = MARK_X;
+        else
+            currPlayer = MARK_O;
     }
 }
