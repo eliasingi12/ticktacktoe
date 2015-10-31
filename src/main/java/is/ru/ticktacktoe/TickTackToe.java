@@ -2,8 +2,16 @@ package is.ru.ticktacktoe;
 
 public class TickTackToe {
 
-   public static int intRet() {
-        return 0;
+    public void initializeBoard(int tac[][]){
+        int n = 1;
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                tac[i][j] = n;
+                n++;
+            }
+        }          
     }
     public static int uncovered() {
     	System.out.println("I am an uncovered function");
