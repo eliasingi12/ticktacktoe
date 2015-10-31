@@ -34,10 +34,12 @@ public class TickTackToeTest {
 	}
 
 	@Test
-	public void testGetPlayer(){
+	public void testGetPlayer(){	
 		TickTackToe tick = new TickTackToe();
-		assertEquals('X', tick.getPlayer(TickTackToe.MARK_X));
-		assertEquals('O', tick.getPlayer(TickTackToe.MARK_O));
+
+		assertEquals('X', tick.getPlayer());
+		tick.currPlayer = tick.MARK_O;
+		assertEquals('O', tick.getPlayer());
 	}
 
 	@Test
@@ -143,6 +145,7 @@ public class TickTackToeTest {
 		TickTackToe.board[2][2] = 9;
 		assertEquals(false, tick.checkIfWinning());	
 	}
+
 	@Test
 	public void testChangePlayers(){
 		TickTackToe tick = new TickTackToe();
