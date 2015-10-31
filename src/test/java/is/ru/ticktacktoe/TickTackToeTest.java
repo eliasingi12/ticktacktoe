@@ -12,12 +12,13 @@ import org.junit.rules.ExpectedException;
 
 public class TickTackToeTest {
 
+
 	public static void main(String args[]) {
       org.junit.runner.JUnitCore.main("is.ru.ticktacktoe.TickTackToeTest.java");
     }
 
 	@Test
-	public void testintRet() {
+	public void testInitializeBoard() {
 
 		int [][] test = new int[3][3];
 		TickTackToe tick = new TickTackToe();
@@ -35,11 +36,12 @@ public class TickTackToeTest {
 	}
 
 	@Test
-	public void runMain() {
-		String[] params = new String[]{"p1","p2","p3"};
+	public void testGetPlayer(){
 		TickTackToe tick = new TickTackToe();
-		tick.main(params);
-		
+		assertEquals('X', tick.getPlayer(TickTackToe.MARK_X));
+		assertEquals('O', tick.getPlayer(TickTackToe.MARK_O));
+
 	}
+
 
 }
