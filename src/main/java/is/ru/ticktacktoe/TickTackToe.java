@@ -5,14 +5,15 @@ public class TickTackToe {
     public static final int MARK_X = -1;
     public static final int MARK_O = -2;
     public static final int SIZE = 3;
+    public static int [][] board = new int [SIZE][SIZE];
 
-    public void initializeBoard(int tac[][]){
+    public void initializeBoard(){
         int n = 1;
         for(int i = 0; i < SIZE; i++)
         {
             for(int j = 0; j < SIZE; j++)
             {
-                tac[i][j] = n;
+                board[i][j] = n;
                 n++;
             }
         }          
@@ -23,5 +24,9 @@ public class TickTackToe {
             return 'X';
         else
             return 'O';
+    }
+
+    public boolean CheckLines(int i){
+        return false;
     }
 }

@@ -19,17 +19,15 @@ public class TickTackToeTest {
 
 	@Test
 	public void testInitializeBoard() {
-
-		int [][] test = new int[3][3];
 		TickTackToe tick = new TickTackToe();
-		tick.initializeBoard(test);
+		tick.initializeBoard();
 
 		int n = 1;
 		for(int i = 0; i < 3; i++)
 		{
 			for(int j = 0; j < 3; j++)
 			{
-				assertEquals(1, test[0][0]);
+				assertEquals(1, TickTackToe.board[0][0]);
 				n++;
 			}
 		}
