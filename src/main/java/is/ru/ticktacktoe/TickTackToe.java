@@ -76,5 +76,12 @@ public class TickTackToe {
 
     public int convertToColumn(int pos){
         return (pos - 1)%SIZE;
-    }    
+    }
+
+    public void updateBoard(int pos)
+    {
+        int line = (pos  - 1)/SIZE;
+        int column = (pos - 1)%SIZE;
+        board[line][column] = currPlayer;
+    }  
 }
