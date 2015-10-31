@@ -72,5 +72,9 @@ public class TickTackToe {
 
     public int convertToLine(int pos){
         return (pos  - 1)/SIZE;
+    }
+
+    public int convertToColumn(int pos){
+        return (pos - 1)%SIZE;
     }    
 }

@@ -164,4 +164,11 @@ public class TickTackToeTest {
 		assertEquals(1, tick.convertToLine(5));
 		assertEquals(2, tick.convertToLine(9));
 	}
+
+	@Test
+	public void testconvertToColumn(){
+		TickTackToe tick = new TickTackToe();
+		assertEquals(0, tick.convertToColumn(4));
+		assertEquals(2, tick.convertToColumn(9));
+	}
 }
