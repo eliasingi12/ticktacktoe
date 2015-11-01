@@ -28,10 +28,8 @@ public class TickTackToeTest {
 		tick.initializeBoard();
 
 		int n = 1;
-		for(int i = 0; i < 3; i++)
-		{
-			for(int j = 0; j < 3; j++)
-			{
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 3; j++){
 				assertEquals(n, TickTackToe.board[i][j]);
 				n++;
 			}
@@ -231,8 +229,7 @@ public class TickTackToeTest {
 		try{
 				is = new ByteArrayInputStream( str.getBytes("UTF-8") );
 				return is;
-			}
-		catch(IOException ex){
+			}catch(IOException ex){
 					System.out.println ("Error: Could not create an mocInput");
     				System.out.println (ex.toString());
 		}
@@ -269,9 +266,46 @@ public class TickTackToeTest {
 	}
 
 	public static String getEndln(){
-        if (System.getProperty("os.name").contains("Windows"))
+        if (System.getProperty("os.name").contains("Windows")){
             return "\r\n";
-        else
+        }else{
             return "\n";
+        }
     }
+
+    @Test 
+	public void testGetLines(){
+		TickTackToe tick = new TickTackToe();
+		tick.initializeBoard();
+		tick.board[0][1] = tick.MARK_X;
+		tick.board[0][2] = tick.MARK_O;
+
+		assertEquals(" 1 | X | O |", tick.getLines(0));
+	}
+
+	@Test
+	public void testPrint(){
+	ByteArrayOutputStream outStream = new ByteArrayOutputStream();		
+		TickTackToe tick = new TickTackToe();
+		tick.initializeBoard();
+		tick.setOutputStream(outStream);
+
+		String endline = getEndln();
+
+		tick.currPlayer = tick.MARK_X;
+		tick.updateBoard(2);
+
+		tick.print();
+
+		String content = outStream.toString();
+		assertEquals(	"+---+---+---+"+ endline +
+						"| 1 | X | 3 |"+ endline +
+						"+---+---+---+"+ endline +
+						"| 4 | 5 | 6 |"+ endline +
+						"+---+---+---+"+ endline +
+						"| 7 | 8 | 9 |"+ endline +
+						"+---+---+---+"+ endline
+
+			,content);	
+	}
 }

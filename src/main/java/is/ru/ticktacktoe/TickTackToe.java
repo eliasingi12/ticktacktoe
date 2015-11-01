@@ -41,10 +41,11 @@ public class TickTackToe {
     }
    
     public char getPlayer(){
-        if(currPlayer == MARK_X)
+        if(currPlayer == MARK_X){
             return 'X';
-        else
+        }else{
             return 'O';
+        }
     }
 
     public boolean checkLines(int i){
@@ -61,8 +62,9 @@ public class TickTackToe {
     }
 
     public boolean checkIfWinning(){
-        if(checkDiagonal())
+        if(checkDiagonal()){
             return true;
+        }
 
         for(int i = 0; i < 3; i ++){
             for(int j = 0; j < 3; j++){
@@ -75,10 +77,11 @@ public class TickTackToe {
     }
 
     public void changePlayers(int count){
-        if(count%2 == 0)
+        if(count%2 == 0){
             currPlayer = MARK_X;
-        else
+        }else{
             currPlayer = MARK_O;
+        }
     }
 
     public int convertToLine(int pos){
@@ -113,5 +116,30 @@ public class TickTackToe {
             pos = in.nextInt();
         }
         return pos;
+    }
+
+    public String getLines(int i){
+        String line = "";
+        for(int j = 0; j < SIZE; j++){
+            if(board[i][j] == MARK_X){
+                line+=" X ";
+            }else if (board[i][j] == MARK_O){
+                line+=" O ";
+            }else{
+                line+=" " + board[i][j] + " ";
+            }
+            line+="|";
+        }
+        return line;
+    }
+
+    public void print(){
+        outStream.println("+---+---+---+");
+        for(int i = 0; i < SIZE; i++){           
+            outStream.print("|");
+            outStream.print(getLines(i));
+            outStream.println();
+            outStream.println("+---+---+---+");         
+        }
     }
 }
