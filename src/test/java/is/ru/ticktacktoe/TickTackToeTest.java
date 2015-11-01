@@ -66,6 +66,10 @@ public class TickTackToeTest {
 		TickTackToe.board[2][1] = TickTackToe.MARK_O;
 		TickTackToe.board[2][2] = TickTackToe.MARK_O;
 		assertEquals(false, tick.checkLines(2));
+		TickTackToe.board[2][0] = TickTackToe.MARK_O;
+		TickTackToe.board[2][1] = TickTackToe.MARK_O;
+		TickTackToe.board[2][2] = TickTackToe.MARK_X;
+		assertEquals(false, tick.checkLines(2));
 	}
 
 	@Test
@@ -86,6 +90,11 @@ public class TickTackToeTest {
 		TickTackToe.board[0][2] = TickTackToe.MARK_X;
 		TickTackToe.board[1][2] = TickTackToe.MARK_O;
 		TickTackToe.board[2][2] = TickTackToe.MARK_O;
+		assertEquals(false, tick.checkColumns(2));
+
+		TickTackToe.board[0][2] = TickTackToe.MARK_O;
+		TickTackToe.board[1][2] = TickTackToe.MARK_O;
+		TickTackToe.board[2][2] = TickTackToe.MARK_X;
 		assertEquals(false, tick.checkColumns(2));
 	}
 
