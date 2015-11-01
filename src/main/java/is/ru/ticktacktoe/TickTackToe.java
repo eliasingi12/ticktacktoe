@@ -117,4 +117,19 @@ public class TickTackToe {
         }
         return pos;
     }
+
+    public String getLines(int i){
+        String line = "";
+        for(int j = 0; j < SIZE; j++){
+            if(board[i][j] == MARK_X){
+                line+=" X ";
+            }else if (board[i][j] == MARK_O){
+                line+=" O ";
+            }else{
+                line+=" " + board[i][j] + " ";
+            }
+            line+="|";
+        }
+        return line;
+    }
 }

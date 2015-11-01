@@ -272,4 +272,14 @@ public class TickTackToeTest {
             return "\n";
         }
     }
+
+    @Test 
+	public void testGetLines(){
+		TickTackToe tick = new TickTackToe();
+		tick.initializeBoard();
+		tick.board[0][1] = tick.MARK_X;
+		tick.board[0][2] = tick.MARK_O;
+
+		assertEquals(" 1 | X | O |", tick.getLines(0));
+	}
 }
