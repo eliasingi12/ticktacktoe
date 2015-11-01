@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Hubar/ticktacktoe.png)](https://travis-ci.org/Hubar/ticktacktoe)
+
 # Tic Tac Toe
 -
 A simple Tic Tac Toe game written in Java to learn Test Driven Development (TDD).
