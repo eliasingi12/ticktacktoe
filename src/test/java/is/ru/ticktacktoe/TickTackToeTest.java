@@ -28,10 +28,8 @@ public class TickTackToeTest {
 		tick.initializeBoard();
 
 		int n = 1;
-		for(int i = 0; i < 3; i++)
-		{
-			for(int j = 0; j < 3; j++)
-			{
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 3; j++){
 				assertEquals(n, TickTackToe.board[i][j]);
 				n++;
 			}
@@ -231,8 +229,7 @@ public class TickTackToeTest {
 		try{
 				is = new ByteArrayInputStream( str.getBytes("UTF-8") );
 				return is;
-			}
-		catch(IOException ex){
+			}catch(IOException ex){
 					System.out.println ("Error: Could not create an mocInput");
     				System.out.println (ex.toString());
 		}
@@ -269,9 +266,10 @@ public class TickTackToeTest {
 	}
 
 	public static String getEndln(){
-        if (System.getProperty("os.name").contains("Windows"))
+        if (System.getProperty("os.name").contains("Windows")){
             return "\r\n";
-        else
+        }else{
             return "\n";
+        }
     }
 }

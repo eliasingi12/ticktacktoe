@@ -41,10 +41,11 @@ public class TickTackToe {
     }
    
     public char getPlayer(){
-        if(currPlayer == MARK_X)
+        if(currPlayer == MARK_X){
             return 'X';
-        else
+        }else{
             return 'O';
+        }
     }
 
     public boolean checkLines(int i){
@@ -61,8 +62,9 @@ public class TickTackToe {
     }
 
     public boolean checkIfWinning(){
-        if(checkDiagonal())
+        if(checkDiagonal()){
             return true;
+        }
 
         for(int i = 0; i < 3; i ++){
             for(int j = 0; j < 3; j++){
@@ -75,10 +77,11 @@ public class TickTackToe {
     }
 
     public void changePlayers(int count){
-        if(count%2 == 0)
+        if(count%2 == 0){
             currPlayer = MARK_X;
-        else
+        }else{
             currPlayer = MARK_O;
+        }
     }
 
     public int convertToLine(int pos){
