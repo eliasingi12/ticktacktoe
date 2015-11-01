@@ -9,8 +9,8 @@ import java.io.InputStream;
 import java.io.IOException;
 
 //for Exception
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
+//import org.junit.Rule;
+//import org.junit.rules.ExpectedException;
 
 
 
@@ -18,7 +18,7 @@ import org.junit.rules.ExpectedException;
 public class TickTackToeTest {
 
 
-	public static void main(String args[]) {
+    public static void main(String[] args) {
       org.junit.runner.JUnitCore.main("is.ru.ticktacktoe.TickTackToeTest.java");
     }
 
