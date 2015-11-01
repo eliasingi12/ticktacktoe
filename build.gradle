@@ -9,8 +9,10 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: "java"
-
+apply plugin: 'application'
 apply plugin: "jacoco"
+
+mainClassName = "is.ru.ticktacktoe.TickTackToe"
 
 jacoco {
     toolVersion = "0.7.1.201405082137"
@@ -42,6 +44,12 @@ test {
         append = false
         destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
         classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+
+jar {
+    manifest {
+	attributes("Main-Class": "is.ru.ticktacktoe.TickTackToe")
     }
 }
 
