@@ -256,6 +256,13 @@ public class TickTackToeTest {
 		tick.getPosition(tick.currPlayer);
 
 		String content = outStream.toString();
-		assertEquals("X position: 7\n", content);		
+		assertEquals("X position: 7" + getEndln(), content);		
 	}
+
+	public static String getEndln(){
+        if (System.getProperty("os.name").contains("Windows"))
+            return "\r\n";
+        else
+            return "\n";
+    }
 }
