@@ -256,6 +256,6 @@ public class TickTackToeTest {
 		tick.getPosition(tick.currPlayer);
 
 		String content = outStream.toString();
-		assertEquals("X position: 7\r\n", content);		
+		assertEquals("X position: 7\n", content);		
 	}
 }
