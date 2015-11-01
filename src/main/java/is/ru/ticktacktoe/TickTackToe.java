@@ -132,4 +132,14 @@ public class TickTackToe {
         }
         return line;
     }
+
+    public void print(){
+        outStream.println("+---+---+---+");
+        for(int i = 0; i < SIZE; i++){           
+            outStream.print("|");
+            outStream.print(getLines(i));
+            outStream.println();
+            outStream.println("+---+---+---+");         
+        }
+    }
 }
