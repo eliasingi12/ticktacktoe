@@ -1,5 +1,10 @@
 package is.ru.ticktacktoe;
 
+import java.util.Scanner;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.io.ByteArrayOutputStream;
+
 public class TickTackToe {
 
     public static final int MARK_X = -1;
@@ -7,25 +12,35 @@ public class TickTackToe {
     public static final int SIZE = 3;
     public static int currPlayer = MARK_X;
     public static int [][] board = new int [SIZE][SIZE];
+    private InputStream inStream;
+    private PrintStream outStream;
 
     TickTackToe(){
         currPlayer = MARK_X;
+        this.inStream  = System.in;
+        this.outStream = System.out;
     }
 
     public void initializeBoard(){
         int n = 1;
-        for(int i = 0; i < SIZE; i++)
-        {
-            for(int j = 0; j < SIZE; j++)
-            {
+        for(int i = 0; i < SIZE; i++){
+            for(int j = 0; j < SIZE; j++){
                 board[i][j] = n;
                 n++;
             }
         }          
     }
+
+    public void setInputStream(InputStream inputStreamToUse){
+        this.inStream = inputStreamToUse;
+    }
+
+    public void setOutputStream(ByteArrayOutputStream outputStreamToUse){
+         
+        this.outStream = new PrintStream(outputStreamToUse);
+    }
    
-    public char getPlayer()
-    {
+    public char getPlayer(){
         if(currPlayer == MARK_X)
             return 'X';
         else
@@ -45,17 +60,13 @@ public class TickTackToe {
                         || ((board[0][2] == board[1][1]) && (board[0][2] == board[2][0])));
     }
 
-    public boolean checkIfWinning()
-    {
+    public boolean checkIfWinning(){
         if(checkDiagonal())
             return true;
 
-        for(int i = 0; i < 3; i ++)
-        {
-            for(int j = 0; j < 3; j++)
-            {
-                if(checkLines(i) || checkColumns(j))
-                {
+        for(int i = 0; i < 3; i ++){
+            for(int j = 0; j < 3; j++){
+                if(checkLines(i) || checkColumns(j)){
                     return true;
                 }
             }
@@ -78,8 +89,7 @@ public class TickTackToe {
         return (pos - 1)%SIZE;
     }
 
-    public void updateBoard(int pos)
-    {
+    public void updateBoard(int pos){
         int line = convertToLine(pos);
         int column = convertToColumn(pos);
         board[line][column] = currPlayer;
@@ -89,6 +99,19 @@ public class TickTackToe {
         int line = convertToLine(pos);
         int column = convertToColumn(pos);
         
-        return!((pos < 0 || pos > SIZE*SIZE) || (board[line][column] == MARK_X ||  board[line][column] == MARK_O));
+        return!((pos < 1 || pos > SIZE*SIZE) || (board[line][column] == MARK_X ||  board[line][column] == MARK_O));
+    }
+
+    public int getPosition(int player){
+        Scanner in = new Scanner(this.inStream);
+        outStream.print(getPlayer() + " position: ");
+        int pos = in.nextInt();
+        outStream.println(Integer.toString(pos));
+        while(!isLegal(pos)){
+            outStream.println("Illegal move! ");
+            outStream.println(getPlayer() + " position: ");
+            pos = in.nextInt();
+        }
+        return pos;
     }
 }
