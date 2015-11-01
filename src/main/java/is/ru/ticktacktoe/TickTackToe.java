@@ -105,7 +105,7 @@ public class TickTackToe {
         return!((pos < 1 || pos > SIZE*SIZE) || (board[line][column] == MARK_X ||  board[line][column] == MARK_O));
     }
 
-    public int getPosition(int player){
+    public int getPosition(){
         Scanner in = new Scanner(this.inStream);
         outStream.print(getPlayer() + " position: ");
         int pos = in.nextInt();
@@ -141,5 +141,15 @@ public class TickTackToe {
             outStream.println();
             outStream.println("+---+---+---+");         
         }
+    }
+
+    public boolean game(){
+        for(int i = 0; i < SIZE*SIZE && !checkIfWinning(); i++){
+            changePlayers(i);
+            updateBoard(getPosition());
+            print();
+            System.out.println();
+        }
+        return checkIfWinning();
     }
 }
