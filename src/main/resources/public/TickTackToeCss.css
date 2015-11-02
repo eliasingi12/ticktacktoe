@@ -8,3 +8,12 @@ th, td {
     width: 100px;
     height: 100px;
 }
+/*
+td:hover {
+  background-color: #ff0000;
+  color: #000000;
+}*/
+
+.red-cell {
+   background: #F00; /* Or some other color */
+}
