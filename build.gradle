@@ -14,6 +14,18 @@ apply plugin: "jacoco"
 
 mainClassName = "is.ru.ticktacktoe.TickTackToe"
 
+apply plugin: "checkstyle"
+
+apply plugin: "jacoco"
+
+apply plugin: 'application'
+
+mainClassName = "is.ru.ticktacktoe.TickTackToeWeb"
+
+jar {
+    manifest { attributes("Main-Class": "is.ru.ticktacktoe.TickTackToeWeb") }
+}
+
 jacoco {
     toolVersion = "0.7.1.201405082137"
     reportsDir = file("$buildDir/customJacocoReportDir")
@@ -37,7 +49,13 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+
+    compile 'com.sparkjava:spark-core:2.3'
 }
+
+checkstyle {
+       ("rootDir/checkstyle.xml")
+    }
 
 test {
     jacoco {
@@ -60,4 +78,8 @@ jacocoTestReport {
         csv.enabled false
         html.destination "${buildDir}/reports/tests/codeCoverage"
     }
+}
+
+task stage {
+    dependsOn installDist
 }

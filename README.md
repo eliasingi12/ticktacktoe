@@ -29,3 +29,6 @@ Run this file to install the game.
  ```sh
 Installa  //todo: some file
 ```
+
+### Code inspection/rules
+ConstantName:	Checks that constant names conform to a format specified by the format property.
