@@ -55,14 +55,14 @@ Run this file to install the game in the terminal and navigate the folder locati
 ### How to play the game
 This is the starting position
 
-![TicTacToe Board](https://github.com/kaarenbjorg/ticktacktoe/tree/master/docs/image)
+![TicTacToe Board](https://github.com/Hubar/ticktacktoe/blob/master/docs/image/1.png)
 
 For an example player can type in number 1 to 9 and then press Enter. Player 1 types in 3, then **X** will come in place 3 instead of the number 3. The board will look like that: 
 
-	borð hérna!
+![TicTacToe Board](https://github.com/Hubar/ticktacktoe/blob/master/docs/image/2.png)
 
 Then there is players 2 turn to play. He will type in 7, and the place 7 will now be **O**.
 
-	borð hérna!
+![TicTacToe Board](https://github.com/Hubar/ticktacktoe/blob/master/docs/image/3.png)
 
 The first one to get 3 in a row wins the game. 
