@@ -345,31 +345,5 @@ public class TickTackToeTest {
 		String content2 = outStream2.toString();
 
 		assertEquals("Winner is: X" + endline, content2);
-
 	}	
-	/*@Test
-	public void testPrint(){
-		ByteArrayOutputStream outStream = new ByteArrayOutputStream();		
-		TickTackToe tick = new TickTackToe();
-		tick.initializeBoard();
-		tick.setOutputStream(outStream);
-
-		String endline = getEndln();
-
-		tick.currPlayer = tick.MARK_X;
-		tick.updateBoard(2);
-
-		tick.print();
-
-		String content = outStream.toString();
-		assertEquals(	"+---+---+---+"+ endline +
-						"| 1 | X | 3 |"+ endline +
-						"+---+---+---+"+ endline +
-						"| 4 | 5 | 6 |"+ endline +
-						"+---+---+---+"+ endline +
-						"| 7 | 8 | 9 |"+ endline +
-						"+---+---+---+"+ endline
-
-			,content);	
-	}*/
 }
