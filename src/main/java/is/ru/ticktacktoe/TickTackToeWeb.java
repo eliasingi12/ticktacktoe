@@ -21,6 +21,17 @@ public class TickTackToeWeb implements SparkApplication{
 
 	@Override
 	public void init(){
-		get("/hello", (req, res) -> "Hello World");
+
+		Spark.post("/thisID", new Route(){
+			
+			@Override
+			public Object handle(final Request request, final Response response){
+				int pos = Integer.valueOf(request.queryParams("thisID"));
+				char currPlayer = game.getPlayer();
+				game.updateBoard(pos);
+				return currPlayer;
+			}
+		});
 	}
+
 }
