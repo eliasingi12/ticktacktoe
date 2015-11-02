@@ -14,7 +14,7 @@ apply plugin: "checkstyle"
 
 apply plugin: "jacoco"
 
-apply plubin: "application"
+apply plugin: "application"
 
 mainClassName = "is.ru.ticktacktoe.TickTackToeWeb"
 
