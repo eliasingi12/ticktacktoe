@@ -1,19 +1,21 @@
-$( function() {
-    var thisID = $(this).attr('id');
+$(function(){
 
-    $('td').click( function() {
-        if($(this).html()==""){
-            $.ajax({
-            type: "thisID",
-            url: "/thisID",
-            data:"thisID=" + thisID
-           
-           }).done(function(result){
-               $(this).html(result);
-        });
-        };
-        event.preventDefault();
+    $('td').click( function(){
+	var cell = $(this).attr('id'); 
+	if($(this).html()==""){
+	    $.ajax({
+		type: "post",
+		url: "/cell",
+		data:"cell=" + cell
+	   
+	   }).done(function(result){
+	       $("#" + cell).html(result);
+	       is_game_over();
+		});
+	};
+	$(this).toggleClass("red-cell");
+	event.preventDefault();
+	
+    });
 
-        $(this).toggleClass("red-cell");
-    } );
-} );
+});
