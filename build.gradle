@@ -16,6 +16,13 @@ apply plugin: "jacoco"
 
 apply plubin: "application"
 
+mainClassName = "is.ru.ticktacktoe.TickTackToeWeb"
+
+jar {
+    manifest { attributes("Main-Class": "is.ru.ticktacktoe.TickTackToeWeb") }
+}
+
+
 jacoco {
     toolVersion = "0.7.1.201405082137"
     reportsDir = file("$buildDir/customJacocoReportDir")
@@ -63,4 +70,8 @@ jacocoTestReport {
         csv.enabled false
         html.destination "${buildDir}/reports/tests/codeCoverage"
     }
+}
+
+task stage {
+    dependsOn installDist
 }
