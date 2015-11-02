@@ -285,7 +285,7 @@ public class TickTackToeTest {
 
 	@Test
 	public void testPrint(){
-	ByteArrayOutputStream outStream = new ByteArrayOutputStream();		
+		ByteArrayOutputStream outStream = new ByteArrayOutputStream();		
 		TickTackToe tick = new TickTackToe();
 		tick.initializeBoard();
 		tick.setOutputStream(outStream);
@@ -323,4 +323,53 @@ public class TickTackToeTest {
 
 		assertEquals(true, tick.game());
 	}
+	
+	@Test
+	public void testGetResult(){
+		ByteArrayOutputStream outStream = new ByteArrayOutputStream();		
+		TickTackToe tick = new TickTackToe();
+
+		tick.setOutputStream(outStream);
+		String endline = getEndln();
+
+		tick.currPlayer = tick.MARK_X;
+
+		tick.getResult(false);
+		String content = outStream.toString();
+
+		assertEquals("Draw!"+ endline, content);
+
+		ByteArrayOutputStream outStream2 = new ByteArrayOutputStream();
+		tick.setOutputStream(outStream2);
+		tick.getResult(true);
+		String content2 = outStream2.toString();
+
+		assertEquals("Winner is: X" + endline, content2);
+
+	}	
+	/*@Test
+	public void testPrint(){
+		ByteArrayOutputStream outStream = new ByteArrayOutputStream();		
+		TickTackToe tick = new TickTackToe();
+		tick.initializeBoard();
+		tick.setOutputStream(outStream);
+
+		String endline = getEndln();
+
+		tick.currPlayer = tick.MARK_X;
+		tick.updateBoard(2);
+
+		tick.print();
+
+		String content = outStream.toString();
+		assertEquals(	"+---+---+---+"+ endline +
+						"| 1 | X | 3 |"+ endline +
+						"+---+---+---+"+ endline +
+						"| 4 | 5 | 6 |"+ endline +
+						"+---+---+---+"+ endline +
+						"| 7 | 8 | 9 |"+ endline +
+						"+---+---+---+"+ endline
+
+			,content);	
+	}*/
 }

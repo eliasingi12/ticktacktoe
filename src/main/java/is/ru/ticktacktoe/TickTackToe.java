@@ -148,8 +148,16 @@ public class TickTackToe {
             changePlayers(i);
             updateBoard(getPosition());
             print();
-            System.out.println();
+            outStream.println();
         }
         return checkIfWinning();
+    }
+
+    public void getResult(boolean result){
+        if(result){
+            outStream.println("Winner is: " + getPlayer());
+        }else{
+            outStream.println("Draw!");
+        }
     }
 }
