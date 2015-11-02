@@ -160,4 +160,12 @@ public class TickTackToe {
             outStream.println("Draw!");
         }
     }
+
+    public static void main(String[] args) {
+        TickTackToe game = new TickTackToe();
+        game.initializeBoard();
+        game.print();
+        boolean result = game.game();
+        game.getResult(result);    
+    }
 }
