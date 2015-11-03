@@ -12,6 +12,7 @@ public class TickTackToe {
     public static final int SIZE = 3;
     public static int currPlayer = MARK_X;
     public static int [][] board = new int [SIZE][SIZE];
+    public static int moves = 0;
     private InputStream inStream;
     private PrintStream outStream;
 
@@ -19,9 +20,11 @@ public class TickTackToe {
         currPlayer = MARK_X;
         this.inStream  = System.in;
         this.outStream = System.out;
+        initializeBoard();
     }
 
     public void initializeBoard(){
+        moves = 0;
         int n = 1;
         for(int i = 0; i < SIZE; i++){
             for(int j = 0; j < SIZE; j++){
@@ -76,12 +79,43 @@ public class TickTackToe {
         return false;
     }
 
+
     public void changePlayers(int count){
         if(count%2 == 0){
             currPlayer = MARK_X;
         }else{
             currPlayer = MARK_O;
         }
+    }
+
+    public void changePlayer(){
+        if(currPlayer == MARK_O){
+            currPlayer = MARK_X;
+        }else{
+            currPlayer = MARK_O;
+        }
+    }
+
+    //Nýtt fall
+    public String pushCell(String x){
+        char y = getPlayer();
+        updateBoard(Integer.parseInt(x));
+        changePlayer();
+        String s = "";
+
+        if(checkIfWinning()){
+            s = y + "t" + moves;
+        }else {
+            s = y + "f" + moves;
+        }
+
+        return s;
+    }
+
+    public int restart(){
+        initializeBoard();
+        currPlayer = MARK_X;
+        return 1;
     }
 
     public int convertToLine(int pos){
@@ -96,6 +130,7 @@ public class TickTackToe {
         int line = convertToLine(pos);
         int column = convertToColumn(pos);
         board[line][column] = currPlayer;
+        moves++;
     } 
 
     public boolean isLegal(int pos){
@@ -160,6 +195,7 @@ public class TickTackToe {
             outStream.println("Draw!");
         }
     }
+
 
     public static void main(String[] args) {
         TickTackToe game = new TickTackToe();
