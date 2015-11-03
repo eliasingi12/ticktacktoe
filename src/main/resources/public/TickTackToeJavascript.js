@@ -1,5 +1,5 @@
 function clear(){
-	for(var i = 0; i < 5; i++){
+	for(var i = 0; i < 9; i++){
 		$("#"+i.toString()).html("");
 	}
 }
@@ -25,9 +25,9 @@ $(function(){
 		data:"cell=" + cell
 
 	   	}).done(function(result){
-	   		if(result == true){
-	   			$("#winner").html(cell);
-	   		}
+	   		//if(result == true){
+	   			$("#winner").html('winning is not all that matters');
+	   		//}
 		});
 	};
 	event.preventDefault();
