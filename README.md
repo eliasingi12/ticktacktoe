@@ -23,11 +23,9 @@ Tic Tac Toe is a two player game. The players take turns marking X and O in a sp
 
 [Travis] (https://travis-ci.org/Hubar/ticktacktoe)
 
-If you want to see the test report you can go to ticktacktoe directory in your computer. Go in the build/reports/tests and open index.html
+Test reports - If you want to see the test report you can go to ticktacktoe directory in your computer. Go in the build/reports/tests and open index.html
 
 [Code coverage](http://cdn.rawgit.com/hubar/ticktacktoe/master/docs/Code_coverage.html)
-
-If you want to see the test report you can go to ticktacktoe directory in your computer. Go in the build/reports/tests and open index.html
 
 ### The team
 
