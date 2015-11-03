@@ -1,4 +1,3 @@
-final TickTackToe tick = new TickTackToe();    
 $(function(){
 
     $('td').click( function(){
@@ -9,7 +8,7 @@ $(function(){
 		url: "/cell",
 		data:"cell=" + cell
 	   
-	   	}).done(function(result){
+	   }).done(function(result){
 	       $("#" + cell).html(result);
 		});
 	};
@@ -20,17 +19,5 @@ $(function(){
 
 });
 
-
-$(document).ready(function(){
-    $("#test").click(function(e){
-          e.preventDefault();
-        $.ajax({type: "POST",
-                url: "/winning",
-                data: "winning=",
-                success:function(result){
-          $("#sharelink").html(result);
-        }});
-      });
-    });
 
 
