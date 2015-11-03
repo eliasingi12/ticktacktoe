@@ -23,9 +23,9 @@ Tic Tac Toe is a two player game. The players take turns marking X and O in a sp
 
 [Travis] (https://travis-ci.org/Hubar/ticktacktoe)
 
-[Test Reports] 
+[Test Reports] vísa í file:///C:/git/ticktacktoe/build/reports/tests/packages/is.ru.ticktacktoe.html
 
-[Code coverage]
+[Code coverage] vísa í file:///C:/git/ticktacktoe/docs/Code_coverage.html
 
 ### The team
 
