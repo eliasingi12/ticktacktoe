@@ -18,7 +18,7 @@ $(function(){
 	   		if($("#winner").html() === ""){
 		   		if(result.charAt(1) == 't'){
 		   			$("#winner").html(cell);
-		   		}if(result.charAt(2) == '9'){
+		   		}else if(result.charAt(2) == '9'){
 		   			$("#winner").html('It\'s a draw!');
 		   		}else {
 		   			$("#winner").html('');
