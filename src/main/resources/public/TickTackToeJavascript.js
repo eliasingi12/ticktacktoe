@@ -15,7 +15,7 @@ $(function(){
 		data:"cell=" + cell
 	   
 	   	}).done(function(result){
-	   		if("#winner"==""){
+	   		if($("#winner").html() === ""){
 		   		if(result.charAt(1) == 't'){
 		   			$("#winner").html(cell);
 		   		}if(result.charAt(2) == '9'){
