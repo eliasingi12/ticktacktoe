@@ -47,6 +47,6 @@ Open cmd/terminal and navigate the folder location. Write the following, to run 
 
 	./bin/deploy
 
-If you don't want to build and run all unit tests in one, you can run tests ```gradle test``` and if you want to build, ```gradle build```
+If you don't want to build the project and run all unit tests in one, you can run tests ```gradle test``` and if you want to build, ```gradle build```
 
 -
