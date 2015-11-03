@@ -15,8 +15,13 @@ $(function(){
 		data:"cell=" + cell
 	   
 	   	}).done(function(result){
-	       $("#" + cell).html(result.charAt(0));
-	       $("#winner").html(result.charAt(1));
+	   		if(result.charAt(0) == 't'){
+	   			$("#winner").html('hallooo');
+	   		}else {
+	   			$("#winner").html('byeee');
+	   		}
+
+	       	$("#" + cell).html(result.charAt(0));
 		});
 /*
 		$.ajax({
