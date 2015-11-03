@@ -25,9 +25,9 @@ $(function(){
 		data:"cell=" + cell
 
 	   	}).done(function(result){
-	   		//if(result == true){
+	   		if(result == "true"){
 	   			$("#winner").html(result);
-	   		//}
+	   		}
 		});
 	};
 	event.preventDefault();
