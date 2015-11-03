@@ -76,8 +76,8 @@ public class TickTackToe {
         return false;
     }
 
-    public void changePlayers(int count){
-        if(count%2 == 0){
+    public void changePlayers(){
+        if(currPlayer == MARK_O){
             currPlayer = MARK_X;
         }else{
             currPlayer = MARK_O;
