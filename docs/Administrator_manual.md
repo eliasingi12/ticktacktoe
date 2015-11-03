@@ -21,7 +21,7 @@ Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do th
 #### Git
 If you don't have git installed on your computer, go to [Git](http://git-scm.com/download/win "Download and install it from here")
 
-####Gradle
+#### Gradle
 If you don't have gradle in your computer, do the folling:
 
 ###### On Windows
@@ -54,6 +54,12 @@ Heroku login
 Go to [Heroku](https://afternoon-brook-4846.herokuapp.com) to play our game on the web. 
 
 -
+### .jar
+When you have run the game on your computer, a .jar file will be saved in the root of your computer. Then you can just run this command to play as a console project. 
+
+	java -jar ticktacktoe.jar
+
+-
 ### How to play the game 
 
 ##### Console Project
@@ -72,4 +78,4 @@ Then there is players 2 turn to play. He will type in 7, and the place 7 will no
 The first one to get 3 in a row wins the game. 
 
 ##### Web project
-
+This is the starting position
