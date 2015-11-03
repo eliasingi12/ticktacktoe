@@ -1,3 +1,15 @@
+function clear(){
+	$("#1").html("$");
+	$("#2").html("$");
+	$("#3").html("$");
+	$("#4").html("$");
+	$("#5").html("$");
+	$("#6").html("$");
+	$("#7").html("$");
+	$("#8").html("$");
+	$("#9").html("$");
+}
+
 $(function(){
 
     $('td').click( function(){
@@ -25,7 +37,7 @@ $(function(){
 		data: null
 	   
 	   	}).done(function(result){
-	       	$("#1").html("$");
+	       	clear();
 		});
 		event.preventDefault();
     });
