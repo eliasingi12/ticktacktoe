@@ -43,7 +43,14 @@ Go to [Travis] (https://travis-ci.org/Hubar/ticktacktoe) to see our continuous i
 
 -
 #### Compile and run
-Open cmd/terminal and navigate the folder location. Write the following, to run the game:
+
+###### On Windows
+Open the command prompt and navigate the folder location. Write the following, to run the game:
+
+	sh .\bin\deploy
+
+###### Unix/Linux
+Open the terminal and navigate the folder location. Write the following, to run the game:
 
 	./bin/deploy
 
