@@ -16,9 +16,9 @@ $(function(){
 	   
 	   	}).done(function(result){
 	   		if(result.charAt(1) == 't'){
-	   			$("#winner").html('hallooo');
+	   			$("#winner").html(cell);
 	   		}else {
-	   			$("#winner").html('byeee');
+	   			$("#winner").html('It\'s a draw!');
 	   		}
 
 	       	$("#" + cell).html(result.charAt(0));
