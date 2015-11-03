@@ -21,8 +21,8 @@ Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do th
 #### Git
 If you don't have git installed on your computer, go to [Git](http://git-scm.com/download/win "Download and install it from here")
 
-#### Gradle
-If you don't have gradle in your computer, do the folling:
+####Gradle
+If you don't have gradle in your computer, do the following:
 
 ###### On Windows
 Download, unzip and setup Gradle [Instructions]( https://docs.gradle.org/current/userguide/installation.html "Follow these instructions"). 

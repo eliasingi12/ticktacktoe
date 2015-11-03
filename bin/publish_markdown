@@ -5,9 +5,9 @@ rm Administrator_manual.html
 rm Desgin_report.html
 rm Development_manual.html
 python -m markdown README.md > README.html
-python -m markdown docs/Administrator_manual.md > Administrator_manual.html
-python -m markdown docs/Desgin_report.md > Design_report.html
-python -m markdown docs/Development_manual.md > Development_manual.html
+python -m markdown docs/Administrator_manual.md > docs/Administrator_manual.html
+python -m markdown docs/Desgin_report.md > docs/Design_report.html
+python -m markdown docs/Development_manual.md > docs/Development_manual.html
 clear
 echo Markdown converted to HTML
 

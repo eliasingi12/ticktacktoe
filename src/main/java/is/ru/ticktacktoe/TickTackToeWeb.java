@@ -5,7 +5,7 @@ import static spark.Spark.*;
 import spark.servlet.SparkApplication;
 
 public class TickTackToeWeb implements SparkApplication{
-	private TickTackToe game;
+	public TickTackToe game;
 
 	public static void main(String[] args){
 		staticFileLocation("/public");
@@ -21,6 +21,9 @@ public class TickTackToeWeb implements SparkApplication{
 
 	@Override
 	public void init(){
-		get("/hello", (req, res) -> "Hello World");
+		TickTackToe tick = new TickTackToe();    
+        post("/cell", (req, res) -> tick.pushCell(req.queryParams("cell")));
+        //post("/winner", (req, res) -> tick.checkIfWinning());
+        post("/restart", (req, res) -> tick.restart());
 	}
 }
