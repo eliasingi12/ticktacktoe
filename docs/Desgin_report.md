@@ -1,33 +1,45 @@
 # Design report
 
+### Group members
+
+Guðjón Hólm Sigurðsson, Karen Björg Halldórsdóttir, Óskar Örn Kjerúlf Þóroddsson, Sara Árnadóttir, Tanya Brá Brynjarsdóttir,
+Valgeir Haukdal Ágústsson, Unnur Þórisdóttir
+
 ### About Tic Tac Toe
 
-Tic Tac Toe are two players game, X and O, who takes turns making the spaces in a 3x3 grid. Player wins the game if he succeeds in placing three of their marks in a horizontal, vertical or diagonal row. 
+Tic Tac Toe is a two player game. The players take turns marking X and O in a space defined by a 3x3 grid. Player wins the game if he succeeds in placing three of his marks in a horizontal, vertical or diagonal line. 
 
--
-#### Coding princeples
-We coded the Tic Tac Toe game in Java using Test-driven development (TDD). We used branches for every feature, where we reviewed before accepting the pull-request. 
 
-Eitthvað um code coverage
-og það sem óskar var að gera...
-
--
 #### Environment
-The game was coded in Sublime Text and cmd/Terminal. To store and share the code, we used Github as our source control. We used Gradle to compile the code and to run the unit test. Then we used Travis for automated continues integration server. In the end we used the Advania Qstack to run the project on a clean computer. 
 
--
-#### Code inspection/rules
+-The game was coded in Sublime Text and cmd/Terminal. To store and share the code, we used Github as our source control. We used Gradle to compile the code and to run the unit test. Then we used Travis for automated continues integration server. In the end we used the Advania Qstack to run the project on a clean computer. 
 
-**ConstantName**	Checks that constant names confirm to a format specified by the format property.
 
-**Comments** ??
+#### Coding principles
 
-notuðum við tab fyrir indent
+-We coded the Tic Tac Toe game in Java using Test-driven development (TDD). We used branches for every feature, where we reviewed change before accepting the pull-request. 
 
-**Declaration** are one per line, it encourages commenting 
+
+#### Code coverage
+
+-We are using Jacoco plugin which provides code coverage metrics for Java code via integration with JaCoCo.
+
+
+#### Code inspection
+
+-We are using some of the Maven-checkstyle-plugin to go over the code to check if it follows the Sun coding conventions.
+
+
+#### Coding rules:
+
+**Use functions with descriptive names**
+
+**Use tab indents**
+
+**Declarations** are one per line, it encourages commenting:	 
 	
-	int temp;
-	int _temp;
+	int temp1;
+	int _temp2;
 
 
 **Curly braces (block)** opens at the end of the same line as the declaration statemens and closes in a new line (see below):
@@ -46,5 +58,14 @@ notuðum við tab fyrir indent
 		...
 	}
 
-**Eitthvað fleira?**
--
+
+**Use camelCasing** see example below:
+
+	public boolean checkIfWinning(){
+	        if(checkDiagonal()){
+	            return true;
+	        }
+
+**Constants declared in capital letters** see example below:
+
+	public static final int SIZE = 3;
