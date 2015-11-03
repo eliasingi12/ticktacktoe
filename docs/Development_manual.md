@@ -39,7 +39,7 @@ Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do th
 ##### Travis
 If you are not signed in on Travis, you have to go to [Travis] (https://travis-ci.org) and sign in with GitHub and sync your repositories and find our - Hubar/ticktacktoe.
 
-	Go to [Travis] (https://travis-ci.org/Hubar/ticktacktoe) to see our continuous integration. 
+Go to [Travis] (https://travis-ci.org/Hubar/ticktacktoe) to see our continuous integration. 
 
 -
 #### Compile and run
