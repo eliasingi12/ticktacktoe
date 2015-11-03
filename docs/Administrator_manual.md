@@ -77,7 +77,4 @@ Then there is players 2 turn to play. He will type in 7, and the place 7 will no
 
 The first one to get 3 in a row wins the game. 
 
-##### Web project
-This is the starting position
-
 -
