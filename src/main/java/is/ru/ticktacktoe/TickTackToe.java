@@ -174,8 +174,9 @@ public class TickTackToe {
             updateBoard(getPosition());
             print();
             outStream.println();
-            if(!checkIfWinning())
+            if(!checkIfWinning()){
             	changePlayer();
+            }
         }
         return checkIfWinning();
  }
@@ -195,5 +196,29 @@ public class TickTackToe {
         game.print();
         boolean result = game.game();
         game.getResult(result);    
+    }
+    
+    public String arrayToString(){
+        int n = 0;
+        String movesX ="";
+        String movesO ="";
+        String result ="";
+        for(int i = 0; i < SIZE; i++){
+            for(int j = 0; j < SIZE; j++) {
+                n++;
+                if (board[i][j] == MARK_X) {
+                    movesX += Integer.toString(n);
+                } else if (board[i][j] == MARK_O) {
+                    movesO += Integer.toString(n);
+                }
+            }
+        }
+        for(int i = 0; i < movesX.length(); i++){
+            result+=" " + movesX.charAt(i);
+            if (i < movesO.length()){
+                result+=" " +movesO.charAt(i);
+            }
+        }
+        return result.substring(1);
     }
 }

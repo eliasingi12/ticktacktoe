@@ -371,6 +371,22 @@ public class TickTackToeTest {
 		tick.changePlayer();
 		assertEquals('X', tick.getPlayer());
 	}
+	
+	@Test
+	public void testArrayToString(){
+		TickTackToe tick = new TickTackToe();
+        TickTackToe.board[0][0] = TickTackToe.MARK_X;
+        TickTackToe.board[0][1] = TickTackToe.MARK_O;
+        TickTackToe.board[0][2] = TickTackToe.MARK_X;
+        TickTackToe.board[1][0] = TickTackToe.MARK_O;
+
+		assertEquals("1 2 3 4", tick.arrayToString());
+		
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		assertEquals("1 2 3 4 5", tick.arrayToString());
+		
+		
+	}
 
 }
 	
