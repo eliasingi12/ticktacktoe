@@ -23,12 +23,27 @@ public class TickTackToeWeb implements SparkApplication{
 	public void init(){
 		final TickTackToe tick = new TickTackToe();
 
+		Spark.post("/cell", new Route()
+		{
+			@Override
+			public Object handle(final Request request, final Response response)
+			{
+				int pos = Integer.valueOf(request.queryParams("cell"));
+				char currPlayer = game.playerTurn();
+				updateBoard(pos);
+				changePlayer();
+				return currPlayer;
+			}
+		});
+
+/*
         post("/cell", (req, res) -> {
         	tick.getPlayer();
         	tick.changePlayer();
         	char player = getPlayer();
         	res.send(player);
-        });
+        	return res;
+        });*/
 
 
         post("/newGame", (req, res) -> {
