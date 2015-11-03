@@ -19,6 +19,7 @@ public class TickTackToe {
         currPlayer = MARK_X;
         this.inStream  = System.in;
         this.outStream = System.out;
+        initializeBoard();
     }
 
     public void initializeBoard(){
