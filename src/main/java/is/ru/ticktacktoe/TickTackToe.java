@@ -92,6 +92,14 @@ public class TickTackToe {
         }
     }
 
+    //Nýtt fall
+    public void pushCell(int x){
+        char y = currPlayer;
+        updateBoard(x);
+        changePlayer();
+        return y;
+    }
+
     public int convertToLine(int pos){
         return (pos  - 1)/SIZE;
     }
@@ -168,6 +176,7 @@ public class TickTackToe {
             outStream.println("Draw!");
         }
     }
+
 
     public static void main(String[] args) {
         TickTackToe game = new TickTackToe();
