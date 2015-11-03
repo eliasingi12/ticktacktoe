@@ -85,7 +85,7 @@ public class TickTackToe {
     }
 
     public void changePlayer(){
-        if(currPlayer.equals(MARK_O)){
+        if(currPlayer == MARK_O){
             currPlayer = MARK_X;
         }else{
             currPlayer = MARK_O;
