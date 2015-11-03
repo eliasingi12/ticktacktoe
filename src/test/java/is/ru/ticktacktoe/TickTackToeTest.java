@@ -171,18 +171,6 @@ public class TickTackToeTest {
 	}
 
 	@Test
-	public void testChangePlayers(){
-		TickTackToe tick = new TickTackToe();
-		// After even number of rounds X is the current player
-		tick.changePlayers(2);
-		assertEquals(TickTackToe.currPlayer, TickTackToe.MARK_X);
-
-		// After odd number of rounds O is the current player
-		tick.changePlayers(1);
-		assertEquals(TickTackToe.currPlayer, TickTackToe.MARK_O);
-	}
-
-	@Test
 	public void testConvertToLine(){
 		TickTackToe tick = new TickTackToe();
 		assertEquals(1, tick.convertToLine(5));
@@ -345,5 +333,60 @@ public class TickTackToeTest {
 		String content2 = outStream2.toString();
 
 		assertEquals("Winner is: X" + endline, content2);
-	}	
+	}
+	
+	@Test
+	public void testRestart(){
+		TickTackToe tick = new TickTackToe();
+		TickTackToe.board[2][2] = TickTackToe.MARK_X;
+		 tick.currPlayer = tick.MARK_O;
+		 int ret = tick.restart();
+		 assertEquals(tick.MARK_X, tick.currPlayer);
+		 assertEquals(1, ret);
+		 assertEquals(9, TickTackToe.board[2][2]);
+		 
+	}
+
+	
+	@Test
+	public void testPushCell(){
+		TickTackToe tick = new TickTackToe();
+		String s = "1";
+
+		assertEquals("Xf1", tick.pushCell(s));
+
+		String t = "9";
+		tick.board[1][1] = tick.MARK_X;
+		tick.currPlayer = tick.MARK_X;
+		assertEquals("Xt2", tick.pushCell(t));
+	}
+	
+	@Test
+	public void testChangePlayer(){	
+		TickTackToe tick = new TickTackToe();
+
+		assertEquals('X', tick.getPlayer());
+		tick.changePlayer();
+		assertEquals('O', tick.getPlayer());
+		tick.changePlayer();
+		assertEquals('X', tick.getPlayer());
+	}
+	
+	@Test
+	public void testArrayToString(){
+		TickTackToe tick = new TickTackToe();
+        TickTackToe.board[0][0] = TickTackToe.MARK_X;
+        TickTackToe.board[0][1] = TickTackToe.MARK_O;
+        TickTackToe.board[0][2] = TickTackToe.MARK_X;
+        TickTackToe.board[1][0] = TickTackToe.MARK_O;
+
+		assertEquals("1 2 3 4", tick.arrayToString());
+		
+		TickTackToe.board[1][1] = TickTackToe.MARK_X;
+		assertEquals("1 2 3 4 5", tick.arrayToString());
+		
+		
+	}
+
 }
+	
