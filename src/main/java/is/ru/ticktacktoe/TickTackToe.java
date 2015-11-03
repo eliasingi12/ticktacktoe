@@ -12,6 +12,7 @@ public class TickTackToe {
     public static final int SIZE = 3;
     public static int currPlayer = MARK_X;
     public static int [][] board = new int [SIZE][SIZE];
+    public static int moves = 0;
     private InputStream inStream;
     private PrintStream outStream;
 
@@ -23,6 +24,7 @@ public class TickTackToe {
     }
 
     public void initializeBoard(){
+        moves = 0;
         int n = 1;
         for(int i = 0; i < SIZE; i++){
             for(int j = 0; j < SIZE; j++){
@@ -102,9 +104,9 @@ public class TickTackToe {
         String s = "";
 
         if(checkIfWinning()){
-            s = y + "t";
+            s = y + "t" + moves;
         }else {
-            s = y + "f";
+            s = y + "f" + moves;
         }
 
         return s;
@@ -128,6 +130,7 @@ public class TickTackToe {
         int line = convertToLine(pos);
         int column = convertToColumn(pos);
         board[line][column] = currPlayer;
+        moves++;
     } 
 
     public boolean isLegal(int pos){

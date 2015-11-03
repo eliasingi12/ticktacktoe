@@ -15,12 +15,15 @@ $(function(){
 		data:"cell=" + cell
 	   
 	   	}).done(function(result){
-	   		if(result.charAt(1) == 't'){
-	   			$("#winner").html(cell);
-	   		}else {
-	   			$("#winner").html('It\'s a draw!');
+	   		if("#winner"==""){
+		   		if(result.charAt(1) == 't'){
+		   			$("#winner").html(cell);
+		   		}if(result.charAt(2) == '9'){
+		   			$("#winner").html('It\'s a draw!');
+		   		}else {
+		   			$("#winner").html('');
+		   		}
 	   		}
-
 	       	$("#" + cell).html(result.charAt(0));
 		});
 /*
