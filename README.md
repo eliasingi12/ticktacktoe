@@ -1,10 +1,11 @@
 # Tic Tac Toe
-This late-term assignment in Hugbúnaðarfræði is to learn to set up technical infrastructure to support agile developent. We are supposed to glue together the bits and pieces through the latter half of this class, into a coherenat infrastructure. We are doing that by making a simple game, Tic Tac Toe. 
+
+This late-term assignment in Hugbúnaðarfræði is to learn to set up technical infrastructure to support agile development. We are supposed to glue together the bits and pieces through the latter half of this class, into a coherant infrastructure. We are doing that by making a simple game, Tic Tac Toe. 
 
 -
 ### About Tic Tac Toe
 
-Tic Tac Toe are two players game, X and O, who takes turns making the spaces in a 3x3 grid. Player wins the game if he succeeds in placing three of their marks in a horizontal, vertical or diagonal row. 
+Tic Tac Toe is a two player game. The players take turns marking X and O in a space defined by a 3x3 grid. Player wins the game if he succeeds in placing three of his marks in a horizontal, vertical or diagonal line. 
 
 -
 ### Documentation
