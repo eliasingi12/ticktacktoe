@@ -1,14 +1,5 @@
 # Design report
 
-### Group members
-
-Guðjón Hólm Sigurðsson, Karen Björg Halldórsdóttir, Óskar Örn Kjerúlf Þóroddsson, Sara Árnadóttir, Tanya Brá Brynjarsdóttir,
-Valgeir Haukdal Ágústsson, Unnur Þórisdóttir
-
-### About Tic Tac Toe
-
-Tic Tac Toe is a two player game. The players take turns marking X and O in a space defined by a 3x3 grid. Player wins the game if he succeeds in placing three of his marks in a horizontal, vertical or diagonal line. 
-
 
 #### Environment
 
