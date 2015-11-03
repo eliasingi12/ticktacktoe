@@ -1,5 +1,5 @@
 function clear(){
-	for(var i = 0; i < 9; i++){
+	for(var i = 1; i < 10; i++){
 		$("#"+i.toString()).html("");
 	}
 }
