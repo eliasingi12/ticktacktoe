@@ -9,13 +9,13 @@ We used Github as the source control client. But you have to have [Git](http://g
 -
 ####  Build environment
 
-##### Java 8
+##### Java JDK
 You need to have Java runtime enviroment on your computer. 
 
 ###### On Windows
 Go to [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and follow the install instructions. 
 
-###### On Unix/Linux 
+###### On Mac/Linux 
 Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do the following in the Terminal:
 
  - brew tap caskroom/cask
@@ -37,25 +37,16 @@ Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do th
 - brew install gradle
 
 ##### Travis
-- hvað þarf hann að run-a til að vá inná Travis
+If you are not signed in on Travis, you have to go to [Travis] (https://travis-ci.org) and sign in with GitHub and sync your repositories and find our - Hubar/ticktacktoe.
 
-	Go to [Travis](https://travis-ci.org/Hubar/ticktacktoe) to see ??? (Continuous Integration)
-
-##### Heroku
--ef við ætlum að hafa það
-
-##### Code Coverage
-- Hvað gerir hann til að skoða það? 
+	Go to [Travis](https://travis-ci.org/Hubar/ticktacktoe) to see our continuous integration. 
 
 -
 #### Compile and run
+Open cmd/terminal and navigate the folder location. Write the following, to run the game:
 
-- hvert fer hann til að compile og run-a? (gradle run, eitthvað ??)?
-- þarf hann ekki að vera búinn að ná í Java 8 (ef hann er ekki með það)?
-- þarf hann að vera búinn að ná í gradle og git?
+	./bin/deploy
 
--
-#### .Jar
-- Þarf hann að búa til .jar file til að build-a kóðan í runnable .jar file?
+If you don't want to build and run all unit tests in one, you can run tests ```gradle test``` and if you want to build, ```gradle build```
 
 -
