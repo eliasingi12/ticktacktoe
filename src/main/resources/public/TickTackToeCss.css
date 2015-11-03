@@ -7,14 +7,14 @@
 
 th, td {
     border: 1px solid black;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 td {
 	text-align:center; 
     vertical-align:middle;
-    font-size: 70px;
+    font-size: 65px;
 }
 
 .red-cell {
