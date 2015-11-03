@@ -26,7 +26,7 @@ $(function(){
 
 	   	}).done(function(result){
 	   		//if(result == true){
-	   			$("#winner").html('winning is not all that matters');
+	   			$("#winner").html(result);
 	   		//}
 		});
 	};
