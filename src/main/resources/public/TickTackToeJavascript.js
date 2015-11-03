@@ -1,7 +1,12 @@
+$( document ).ready(function() {
+    clear();
+});
+
 function clear(){
 	for(var i = 1; i < 10; i++){
 		$("#"+i.toString()).html("");
 	}
+	$("#winner".html("");
 }
 
 $(function(){
