@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-This late-term assignment in Hugbúnaðarfræði is to learn to set up technical infrastructure to support agile development. We are supposed to glue together the bits and pieces through the latter half of this class, into a coherant infrastructure. We are doing that by making a simple game, Tic Tac Toe. 
+This late-term assignment in Hugbúnaðarfræði is to learn to set up technical infrastructure to support agile development. We are supposed to glue together the bits and pieces through the latter half of this class, into a coherent infrastructure. We are doing that by making a simple game, Tic Tac Toe. 
 
 -
 ### About Tic Tac Toe
@@ -11,15 +11,15 @@ Tic Tac Toe is a two player game. The players take turns marking X and O in a sp
 ### Documentation
 [Administrator manual] (https://github.com/Hubar/ticktacktoe/blob/master/docs/Administrator_manual.md) - How to set up the program and get it to run (also on a fresh machine).
 
-[Development manual] (https://github.com/Hubar/ticktacktoe/blob/master/docs/Development_manual.md) - What the program needs and how to it build on a frash machine. 
+[Development manual] (https://github.com/Hubar/ticktacktoe/blob/master/docs/Development_manual.md) - What the program needs and how to build it on a fresh machine. 
 
-[Design report] (https://github.com/Hubar/ticktacktoe/blob/master/docs/Desgin_report.md) - dicument describing the initial desgin. 
+[Design report] (https://github.com/Hubar/ticktacktoe/blob/master/docs/Desgin_report.md) - document describing the initial design. 
 
 #### Play the game!
 
 [Play game here!] (https://afternoon-brook-4846.herokuapp.com)
 
-#### Blah
+#### Reports
 
 [Travis] (https://travis-ci.org/Hubar/ticktacktoe)
 
