@@ -1,7 +1,3 @@
-$( document ).ready(function() {
-    clear();
-});
-
 function clear(){
 	for(var i = 1; i < 10; i++){
 		$("#"+i.toString()).html("");
@@ -64,4 +60,6 @@ $(function(){
 
 });
 
-
+$( document ).ready(function() {
+    clear();
+});
