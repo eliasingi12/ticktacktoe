@@ -18,7 +18,7 @@ $(function(){
     });
 
 
-    $('restart').click( function(){
+    $('#restart').click( function(){
 	    $.ajax({
 		type: "post",
 		url: "/restart",
