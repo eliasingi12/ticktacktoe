@@ -10,7 +10,7 @@ $(function(){
 	   
 	   }).done(function(result){
 	       $("#" + cell).html(result);
-	       is_game_over();
+	       //is_game_over();
 		});
 	};
 	$(this).toggleClass("red-cell");
@@ -19,3 +19,13 @@ $(function(){
     });
 
 });
+
+
+function myFunction() {
+	$.ajax({
+		type: 'post',
+	    url: '/newGame'
+	}).done(function(result){
+		$("#again").html('start again');
+	});
+}
