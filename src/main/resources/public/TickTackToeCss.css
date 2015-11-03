@@ -1,6 +1,8 @@
 #gameBoard{
 	height: 300px;
 	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 th, td {
@@ -9,12 +11,30 @@ th, td {
     height: 100px;
 }
 
+td {
+	text-align:center; 
+    vertical-align:middle;
+    font-size: 100px;
+}
+
 .red-cell {
    background: #F00; /* Or some other color */
 }
 
-.center{
+#center{
 	margin-left: auto;
 	margin-right: auto;
 	width: 400px
 }
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+#restart {+
+	margin: 0 auto; /* or margin: 0 auto 0 auto */
+}
+
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+  }

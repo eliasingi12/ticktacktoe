@@ -27,22 +27,8 @@ $(function(){
 	   		}
 	       	$("#" + cell).html(result.charAt(0));
 		});
-/*
-		$.ajax({
-		type: "post",
-		url: "/winner",
-		data:"cell=" + cell
-
-	   	}).done(function(result){
-	   		if(result == "true"){
-	   			$("#winner").html('hallooo');
-	   		}else {
-	   			$("#winner").html('byeee');
-	   		}
-		});*/
 	};
 	event.preventDefault();
-	
     });
 
 
