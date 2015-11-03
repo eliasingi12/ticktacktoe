@@ -26,7 +26,9 @@ $(function(){
 
 	   	}).done(function(result){
 	   		if(result == "true"){
-	   			$("#winner").html(result);
+	   			$("#winner").html('hallooo');
+	   		}else {
+	   			$("#winner").html('byeee');
 	   		}
 		});
 	};
