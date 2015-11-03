@@ -4,7 +4,7 @@
 To play Tic Tac Toe on your computer, you have to do the following: 
 
 -
-#### Java 8
+#### Java JDK
 You need to have Java runtime enviroment on your computer. 
 
 ##### On Windows
@@ -41,18 +41,22 @@ Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do th
 
 Go to [GitHub](https://github.com/Hubar/ticktacktoe) and download the project as .zip/.tar.gz
 
-###### On Windows
-Run this bat file to install the game in command prompt and navigate the folder location. 
+Run this bat file to install the game in command prompt/terminal and navigate the folder location. 
 
-	install.bat  //todo: some batfile
-
-###### On Unix/Linux
-Run this file to install the game in the terminal and navigate the folder location.
-
-	Installa  //todo: some file
+	./bin/deploy
 
 -
-### How to play the game
+#### Heroku
+If you don't have Heroku installed on your computer you have to sign up on [Heroku](Heroku.com) and the set up the [Heroku Toolbelt](https://toolbelt.heroku.com). Then open cmd/terminal and sign in using Heroku Toolbelt:
+
+Heroku login
+	
+Go to [Heroku](https://afternoon-brook-4846.herokuapp.com) to play our game on the web. 
+
+-
+### How to play the game 
+
+##### Console Project
 This is the starting position
 
 ![TicTacToe Board](https://github.com/Hubar/ticktacktoe/blob/master/docs/image/1.png)
@@ -66,3 +70,6 @@ Then there is players 2 turn to play. He will type in 7, and the place 7 will no
 ![TicTacToe Board](https://github.com/Hubar/ticktacktoe/blob/master/docs/image/3.png)
 
 The first one to get 3 in a row wins the game. 
+
+##### Web project
+
