@@ -94,10 +94,10 @@ public class TickTackToe {
 
     //Nýtt fall
     public char pushCell(String x){
-        int y = currPlayer;
+        char y = getPlayer;
         updateBoard(Integer.parseInt(x));
         changePlayer();
-        return getPlayer();
+        return y;
     }
 
     public int restart(){
