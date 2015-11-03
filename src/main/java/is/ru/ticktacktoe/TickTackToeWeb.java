@@ -23,7 +23,7 @@ public class TickTackToeWeb implements SparkApplication{
 	public void init(){
 		final TickTackToe tick = new TickTackToe();    
         post("/cell", (req, res) -> tick.pushCell(req.queryParams("cell")));
-        post("/winner", (req, res) -> tick.checkIfWinning());
+        post("/winner", (req, res) -> tick.sara());
         post("/restart", (req, res) -> tick.restart());
 	}
 }

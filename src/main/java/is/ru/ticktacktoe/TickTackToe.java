@@ -76,6 +76,10 @@ public class TickTackToe {
         return false;
     }
 
+    public boolean sara(){
+        return true;
+    }
+
     public void changePlayers(int count){
         if(count%2 == 0){
             currPlayer = MARK_X;
