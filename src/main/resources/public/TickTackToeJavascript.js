@@ -10,7 +10,6 @@ $(function(){
 	   
 	   }).done(function(result){
 	       $("#" + cell).html(result);
-	       //is_game_over();
 		});
 	};
 	$(this).toggleClass("red-cell");
