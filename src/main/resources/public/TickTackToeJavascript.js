@@ -14,8 +14,20 @@ $(function(){
 		url: "/cell",
 		data:"cell=" + cell
 	   
-	   }).done(function(result){
+	   	}).done(function(result){
 	       $("#" + cell).html(result);
+
+		});
+
+		$.ajax({
+		type: "post",
+		url: "/winner",
+		data: null
+	   
+	   	}).done(function(result){
+	   		if(result == true){
+	   			$("#winner").html(cell);
+	   		}
 		});
 	};
 	event.preventDefault();
