@@ -22,8 +22,8 @@ $(function(){
 		$.ajax({
 		type: "post",
 		url: "/winner",
-		data: null
-	   
+		data:"cell=" + cell
+
 	   	}).done(function(result){
 	   		if(result == true){
 	   			$("#winner").html(cell);
