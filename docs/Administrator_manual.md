@@ -61,7 +61,7 @@ Go to [Heroku](https://afternoon-brook-4846.herokuapp.com) to play our game on t
 
 -
 ### .jar
-When you have run the game on your computer, a .jar file will be saved in the root of your computer. Then you can just run this command to play the game as a console project. 
+When you have run the game on your computer, a .jar file will be saved in the root of your computer in a directory name jar. Go in the jar directory and then you can just run this command to play the game as a console project. 
 
 	java -jar ticktacktoe.jar
 
