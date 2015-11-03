@@ -26,7 +26,8 @@ public class TickTackToeWeb implements SparkApplication{
         post("/cell", (req, res) -> {
         	tick.getPlayer();
         	tick.changePlayer();
-        	return getPlayer();
+        	char player = getPlayer();
+        	res.send(player);
         });
 
 
