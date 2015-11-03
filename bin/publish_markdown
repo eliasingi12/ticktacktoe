@@ -1,9 +1,9 @@
 #!/bin/bash
 
-rm README.html
-rm Administrator_manual.html
-rm Desgin_report.html
-rm Development_manual.html
+rm docs/README.html
+rm docs/Administrator_manual.html
+rm docs/Desgin_report.html
+rm docs/Development_manual.html
 python -m markdown README.md > README.html
 python -m markdown docs/Administrator_manual.md > docs/Administrator_manual.html
 python -m markdown docs/Desgin_report.md > docs/Design_report.html

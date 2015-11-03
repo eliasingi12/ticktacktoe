@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ./gradlew installDist
-rm ~/ticktacktoe.jar
-cp build/libs/ticktacktoe.jar ~
-java -jar ~/ticktacktoe.jar
+mkdir -p ~/jar
+rm -f ~/jar/ticktacktoe.jar
+cp build/libs/ticktacktoe.jar ~/jar
+java -jar ~/jar/ticktacktoe.jar
