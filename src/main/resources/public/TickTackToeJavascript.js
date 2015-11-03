@@ -15,10 +15,10 @@ $(function(){
 		data:"cell=" + cell
 	   
 	   	}).done(function(result){
-	       $("#" + cell).html(result);
-
+	       $("#" + cell).html(result.charAt(0));
+	       $("#winner").html(result.charAt(1));
 		});
-
+/*
 		$.ajax({
 		type: "post",
 		url: "/winner",
@@ -30,7 +30,7 @@ $(function(){
 	   		}else {
 	   			$("#winner").html('byeee');
 	   		}
-		});
+		});*/
 	};
 	event.preventDefault();
 	

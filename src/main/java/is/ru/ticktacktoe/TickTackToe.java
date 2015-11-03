@@ -95,10 +95,17 @@ public class TickTackToe {
     }
 
     //Nýtt fall
-    public char pushCell(String x){
-        char y = getPlayer();
+    public String pushCell(String x){
+        String y = getPlayer();
         updateBoard(Integer.parseInt(x));
         changePlayer();
+
+        if(checkIfWinning()){
+            y = y + "t";
+        }else {
+            y = y + "f";
+        }
+
         return y;
     }
 
