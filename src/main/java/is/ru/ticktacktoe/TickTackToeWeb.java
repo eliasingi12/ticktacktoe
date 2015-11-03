@@ -21,13 +21,6 @@ public class TickTackToeWeb implements SparkApplication{
 
 	@Override
 	public void init(){
-		final TickTackToe tick = new TickTackToe();    
-        post("/cell", (req, res) -> {
-        	JSONObject json = new JSONObject();
-			json.put("CurrentPlayer", game.getPlayer());
-			return json;
-        });
-        
+		get("/hello", (req, res) -> "Hello World");
 	}
-
 }
