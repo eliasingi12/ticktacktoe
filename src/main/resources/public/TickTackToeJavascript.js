@@ -60,4 +60,6 @@ $(function(){
 
 });
 
-
+$( document ).ready(function() {
+    $("#restart").trigger("click")
+});
