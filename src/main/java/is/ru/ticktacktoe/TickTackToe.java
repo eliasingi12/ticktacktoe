@@ -93,11 +93,11 @@ public class TickTackToe {
     }
 
     //Nýtt fall
-    public int pushCell(String x){
+    public char pushCell(String x){
         int y = currPlayer;
         updateBoard(Integer.parseInt(x));
         changePlayer();
-        return y;
+        return getPlayer();
     }
 
     public int convertToLine(int pos){
