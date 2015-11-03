@@ -1,13 +1,7 @@
 function clear(){
-	$("#1").html("");
-	$("#2").html("");
-	$("#3").html("");
-	$("#4").html("");
-	$("#5").html("");
-	$("#6").html("");
-	$("#7").html("");
-	$("#8").html("");
-	$("#9").html("");
+	for(var i = 0; i < 5; i++){
+		$("#"+i.toString()).html("");
+	}
 }
 
 $(function(){
@@ -24,7 +18,6 @@ $(function(){
 	       $("#" + cell).html(result);
 		});
 	};
-	$(this).toggleClass("red-cell");
 	event.preventDefault();
 	
     });
