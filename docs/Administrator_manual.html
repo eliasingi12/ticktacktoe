@@ -2,7 +2,7 @@
 <h2>Getting Started</h2>
 <p>To play Tic Tac Toe on your computer, you have to do the following: </p>
 <p>-</p>
-<h4>Java 8</h4>
+<h4>Java JDK</h4>
 <p>You need to have Java runtime enviroment on your computer. </p>
 <h5>On Windows</h5>
 <p>Go to <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre7u9-downloads-1859586.html">Oracle</a> and follow the install instructions. </p>
@@ -17,7 +17,7 @@
 <h4>Git</h4>
 <p>If you don't have git installed on your computer, go to <a href="http://git-scm.com/download/win" title="Download and install it from here">Git</a></p>
 <h4>Gradle</h4>
-<p>If you don't have gradle in your computer, do the folling:</p>
+<p>If you don't have gradle in your computer, do the following:</p>
 <h6>On Windows</h6>
 <p>Download, unzip and setup Gradle <a href="https://docs.gradle.org/current/userguide/installation.html" title="Follow these instructions">Instructions</a>. </p>
 <ul>
@@ -35,16 +35,28 @@
 <p>-</p>
 <h4>Running Tic Tac Toe on your computer</h4>
 <p>Go to <a href="https://github.com/Hubar/ticktacktoe">GitHub</a> and download the project as .zip/.tar.gz</p>
-<h6>On Windows</h6>
-<p>Run this bat file to install the game in command prompt and navigate the folder location. </p>
-<pre><code>install.bat  //todo: some batfile
+<h6>On Unix/Linux</h6>
+<p>Open the command prompt and navigate the folder location. Write the following, to run the game:</p>
+<pre><code>./bin/deploy
 </code></pre>
 <h6>On Unix/Linux</h6>
-<p>Run this file to install the game in the terminal and navigate the folder location.</p>
-<pre><code>Installa  //todo: some file
+<p>Open the terminal and navigate the folder location. Write the following, to run the game:</p>
+<pre><code>sh .\bin\deploy
+</code></pre>
+<p>-</p>
+<h4>Heroku</h4>
+<p>If you don't have Heroku installed on your computer you have to sign up on <a href="Heroku.com">Heroku</a> and the set up the <a href="https://toolbelt.heroku.com">Heroku Toolbelt</a>. Then open cmd/terminal and sign in using Heroku Toolbelt:</p>
+<pre><code>Heroku login
+</code></pre>
+<p>Go to <a href="https://afternoon-brook-4846.herokuapp.com">Heroku</a> to play our game on the web. </p>
+<p>-</p>
+<h3>.jar</h3>
+<p>When you have run the game on your computer, a .jar file will be saved in the root of your computer. Then you can just run this command to play the game as a console project. </p>
+<pre><code>java -jar ticktacktoe.jar
 </code></pre>
 <p>-</p>
 <h3>How to play the game</h3>
+<h5>Console Project</h5>
 <p>This is the starting position</p>
 <p><img alt="TicTacToe Board" src="https://github.com/Hubar/ticktacktoe/blob/master/docs/image/1.png" /></p>
 <p>For an example player can type in number 1 to 9 and then press Enter. Player 1 types in 3, then <strong>X</strong> will come in place 3 instead of the number 3. The board will look like that: </p>
@@ -52,3 +64,6 @@
 <p>Then there is players 2 turn to play. He will type in 7, and the place 7 will now be <strong>O</strong>.</p>
 <p><img alt="TicTacToe Board" src="https://github.com/Hubar/ticktacktoe/blob/master/docs/image/3.png" /></p>
 <p>The first one to get 3 in a row wins the game. </p>
+<h5>Web project</h5>
+<p>[Play game here!] (https://afternoon-brook-4846.herokuapp.com)</p>
+<p>-</p>

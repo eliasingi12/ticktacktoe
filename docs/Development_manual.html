@@ -6,11 +6,11 @@
 </code></pre>
 <p>-</p>
 <h4>Build environment</h4>
-<h5>Java 8</h5>
+<h5>Java JDK</h5>
 <p>You need to have Java runtime enviroment on your computer. </p>
 <h6>On Windows</h6>
 <p>Go to <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Oracle</a> and follow the install instructions. </p>
-<h6>On Unix/Linux</h6>
+<h6>On Mac/Linux</h6>
 <p>Go to <a href="http://brew.sh">Homebrew</a> and copy the Url and run in the Terminal. Do the following in the Terminal:</p>
 <ul>
 <li>brew tap caskroom/cask</li>
@@ -33,28 +33,17 @@
 <li>brew install gradle</li>
 </ul>
 <h5>Travis</h5>
-<ul>
-<li>
-<p>hvað þarf hann að run-a til að vá inná Travis</p>
-<p>Go to <a href="https://travis-ci.org/Hubar/ticktacktoe">Travis</a> to see ??? (Continuous Integration)</p>
-</li>
-</ul>
-<h5>Heroku</h5>
-<p>-ef við ætlum að hafa það</p>
-<h5>Code Coverage</h5>
-<ul>
-<li>Hvað gerir hann til að skoða það? </li>
-</ul>
+<p>If you are not signed in on Travis, you have to go to [Travis] (https://travis-ci.org) and sign in with GitHub and sync your repositories and find our - Hubar/ticktacktoe.</p>
+<p>Go to [Travis] (https://travis-ci.org/Hubar/ticktacktoe) to see our continuous integration. </p>
 <p>-</p>
 <h4>Compile and run</h4>
-<ul>
-<li>hvert fer hann til að compile og run-a? (gradle run, eitthvað ??)?</li>
-<li>þarf hann ekki að vera búinn að ná í Java 8 (ef hann er ekki með það)?</li>
-<li>þarf hann að vera búinn að ná í gradle og git?</li>
-</ul>
-<p>-</p>
-<h4>.Jar</h4>
-<ul>
-<li>Þarf hann að búa til .jar file til að build-a kóðan í runnable .jar file?</li>
-</ul>
+<h6>On Windows</h6>
+<p>Open the command prompt and navigate the folder location. Write the following, to run the game:</p>
+<pre><code>sh .\bin\deploy
+</code></pre>
+<h6>Unix/Linux</h6>
+<p>Open the terminal and navigate the folder location. Write the following, to run the game:</p>
+<pre><code>./bin/deploy
+</code></pre>
+<p>If you don't want to build the project and run all unit tests in one, you can run tests <code>gradle test</code> and if you want to build, <code>gradle build</code></p>
 <p>-</p>
