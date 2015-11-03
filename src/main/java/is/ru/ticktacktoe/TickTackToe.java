@@ -79,15 +79,6 @@ public class TickTackToe {
         return false;
     }
 
-
-    public void changePlayers(int count){
-        if(count%2 == 0){
-            currPlayer = MARK_X;
-        }else{
-            currPlayer = MARK_O;
-        }
-    }
-
     public void changePlayer(){
         if(currPlayer == MARK_O){
             currPlayer = MARK_X;
@@ -178,15 +169,16 @@ public class TickTackToe {
         }
     }
 
-    public boolean game(){
+ public boolean game(){
         for(int i = 0; i < SIZE*SIZE && !checkIfWinning(); i++){
-            changePlayers(i);
             updateBoard(getPosition());
             print();
             outStream.println();
+            if(!checkIfWinning())
+            	changePlayer();
         }
         return checkIfWinning();
-    }
+ }
 
     public void getResult(boolean result){
         if(result){
