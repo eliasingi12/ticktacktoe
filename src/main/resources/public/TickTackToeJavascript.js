@@ -21,11 +21,4 @@ $(function(){
 });
 
 
-function myFunction() {
-	$.ajax({
-		type: 'post',
-	    url: '/newGame'
-	}).done(function(result){
-		$("#again").html('start again');
-	});
-}
+
