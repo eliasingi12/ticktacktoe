@@ -30,8 +30,8 @@ public class TickTackToeWeb implements SparkApplication{
 			{
 				int pos = Integer.valueOf(request.queryParams("cell"));
 				char currPlayer = game.getPlayer();
-				updateBoard(pos);
-				changePlayer();
+				game.updateBoard(pos);
+				game.changePlayer();
 				return currPlayer;
 			}
 		});
