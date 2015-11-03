@@ -41,15 +41,21 @@ Go to [Homebrew](http://brew.sh) and copy the Url and run in the Terminal. Do th
 
 Go to [GitHub](https://github.com/Hubar/ticktacktoe) and download the project as .zip/.tar.gz
 
-Run this bat file to install the game in command prompt/terminal and navigate the folder location. 
+###### On Unix/Linux 
+Open the command prompt and navigate the folder location. Write the following, to run the game:
 
 	./bin/deploy
+
+###### On Unix/Linux 
+Open the terminal and navigate the folder location. Write the following, to run the game:
+
+	sh .\bin\deploy
 
 -
 #### Heroku
 If you don't have Heroku installed on your computer you have to sign up on [Heroku](Heroku.com) and the set up the [Heroku Toolbelt](https://toolbelt.heroku.com). Then open cmd/terminal and sign in using Heroku Toolbelt:
 
-Heroku login
+	Heroku login
 	
 Go to [Heroku](https://afternoon-brook-4846.herokuapp.com) to play our game on the web. 
 
@@ -76,5 +82,9 @@ Then there is players 2 turn to play. He will type in 7, and the place 7 will no
 ![TicTacToe Board](https://github.com/Hubar/ticktacktoe/blob/master/docs/image/3.png)
 
 The first one to get 3 in a row wins the game. 
+
+##### Web project
+
+[Play game here!] (https://afternoon-brook-4846.herokuapp.com)
 
 -
