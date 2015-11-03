@@ -100,9 +100,10 @@ public class TickTackToe {
         return getPlayer();
     }
 
-    public void restart(){
+    public int restart(){
         initializeBoard();
         currPlayer = MARK_X;
+        return 1;
     }
 
     public int convertToLine(int pos){
