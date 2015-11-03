@@ -17,4 +17,19 @@ $(function(){
 	
     });
 
+
+    $('restart').click( function(){
+	    $.ajax({
+		type: "post",
+		url: "/restart",
+		data: null
+	   
+	   	}).done(function(result){
+	       	$("#1").html("$");
+		});
+		event.preventDefault();
+    });
+
 });
+
+
